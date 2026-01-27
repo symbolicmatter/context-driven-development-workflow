@@ -1,6 +1,6 @@
-# Context-Driven Learning Workflow — AGENTS
+# Agent Roles and Responsibilities
 
-This document defines the **mandatory roles, responsibilities, and operating rules** for AI agents participating in a **Context-Driven Learning Workflow (CDLW)**.
+This document defines the **mandatory roles, responsibilities, and operating rules** for AI agents participating in a **Context-Driven Development Workflow (CDDW)**.
 
 It is **normative and operational**, not descriptive.
 
@@ -22,7 +22,7 @@ Code is not the primary output of this workflow. **Learning is.**
 
 ## Agent Roles
 
-CDLW distinguishes between three agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+CDDW distinguishes between three agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
 
 ---
 
