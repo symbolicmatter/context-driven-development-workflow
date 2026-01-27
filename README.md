@@ -1,3 +1,13 @@
+---
+subject: CDDW
+description: Overview and positioning of the Context-Driven Development Workflow
+role: core
+priority: high
+status: active
+name: CDDW README
+path_name: CDDW/README.md
+last_modified: 2026-01-27
+---
 # Context-Driven Development Workflow (CDDW)
 
 Context-Driven Development Workflow (CDDW) is a **practical, operational workflow** for structuring software development as a continuous learning process in AI-assisted engineering environments.
@@ -114,3 +124,12 @@ It is intended to:
 If parts of this workflow prove ineffective, they should be revised or discarded.
 
 The goal is not methodological purity, but sustained coherence in AI-assisted software development.
+
+---
+
+## Stewardship
+
+This work is published and maintained by **Symbolic Matter**.
+
+Symbolic Matter is a research-driven studio exploring the intersection of
+software design, meaning, and emerging AI-assisted development practices.
