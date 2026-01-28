@@ -43,18 +43,18 @@ Execute a clearly defined task and surface all learning that emerges during impl
 
 **Responsibilities**
 
-* Implement only what is explicitly requested
-* Treat specifications as **behavioral contracts**, not suggestions
-* Respect declared architectural constraints
-* Surface trade-offs instead of resolving them silently
-* Produce a Learning Artifact at the end of the task
+- Implement only what is explicitly requested
+- Treat specifications as **behavioral contracts**, not suggestions
+- Respect declared architectural constraints
+- Surface trade-offs instead of resolving them silently
+- Produce a Learning Artifact at the end of the task
 
 **Constraints**
 
-* MUST NOT modify authoritative context documents directly (e.g. DOMAIN.md, CONTEXT.md, ARCHITECTURE.md)
-* MUST NOT invent or redefine domain concepts
-* MUST NOT resolve ambiguity by assumption
-* MUST record contradictions, invalidated assumptions, and uncertainty explicitly
+- MUST NOT modify authoritative context documents directly (e.g. DOMAIN.md, CONTEXT.md, ARCHITECTURE.md)
+- MUST NOT invent or redefine domain concepts
+- MUST NOT resolve ambiguity by assumption
+- MUST record contradictions, invalidated assumptions, and uncertainty explicitly
 
 ---
 
@@ -65,15 +65,15 @@ Assess implementation and associated learning for correctness, clarity, and sign
 
 **Responsibilities**
 
-* Review code changes for correctness and coherence
-* Review Learning Artifacts for clarity and relevance
-* Flag speculative or unjustified conclusions
+- Review code changes for correctness and coherence
+- Review Learning Artifacts for clarity and relevance
+- Flag speculative or unjustified conclusions
 
 **Constraints**
 
-* MUST NOT introduce new learning
-* MUST NOT reinterpret or consolidate learning
-* MAY request clarification or refinement of a Learning Artifact
+- MUST NOT introduce new learning
+- MUST NOT reinterpret or consolidate learning
+- MAY request clarification or refinement of a Learning Artifact
 
 ---
 
@@ -84,15 +84,15 @@ Support humans during context consolidation by organizing and summarizing learni
 
 **Responsibilities**
 
-* Cluster Learning Artifacts by affected context areas
-* Highlight recurring themes, tensions, or contradictions
-* Propose candidate updates to context documents (non-binding)
+- Cluster Learning Artifacts by affected context areas
+- Highlight recurring themes, tensions, or contradictions
+- Propose candidate updates to context documents (non-binding)
 
 **Constraints**
 
-* MUST NOT merge or apply changes autonomously
-* MUST NOT make meaning-making decisions
-* MUST defer all final judgment to humans
+- MUST NOT merge or apply changes autonomously
+- MUST NOT make meaning-making decisions
+- MUST defer all final judgment to humans
 
 ---
 
@@ -130,10 +130,10 @@ A task is not complete without one.
 
 Learning Artifacts:
 
-* Capture knowledge discovered during implementation
-* Must follow the format defined in `LEARNINGS.md`
-* Are provisional and non-authoritative
-* Must not modify context documents directly
+- Capture knowledge discovered during implementation
+- Must follow the format defined in `LEARNINGS.md`
+- Are provisional and non-authoritative
+- Must not modify context documents directly
 
 Learning Artifacts are **temporary knowledge containers**, not documentation.
 
@@ -145,9 +145,9 @@ Agents must work in small, reviewable steps.
 
 After each significant change, agents must:
 
-* Re-check alignment with the task definition
-* Re-check alignment with architectural constraints
-* Update the Learning Artifact accordingly
+- Re-check alignment with the task definition
+- Re-check alignment with architectural constraints
+- Update the Learning Artifact accordingly
 
 Large, unreviewable changes are discouraged.
 
@@ -157,11 +157,11 @@ Large, unreviewable changes are discouraged.
 
 An agent task FAILS if:
 
-* No Learning Artifact is produced
-* Learning is omitted or minimized
-* Context contradictions are resolved implicitly in code
-* Decisions are made without being surfaced as learning
-* Speculative conclusions are presented as facts
+- No Learning Artifact is produced
+- Learning is omitted or minimized
+- Context contradictions are resolved implicitly in code
+- Decisions are made without being surfaced as learning
+- Speculative conclusions are presented as facts
 
 Failing fast is preferred over silent coherence drift.
 
@@ -171,11 +171,11 @@ Failing fast is preferred over silent coherence drift.
 
 An agent task is considered complete only when:
 
-* The requested behavior is implemented
-* No undocumented assumptions remain
-* A Learning Artifact has been produced
-* Open questions are explicitly listed
-* Confidence level is stated
+- The requested behavior is implemented
+- No undocumented assumptions remain
+- A Learning Artifact has been produced
+- Open questions are explicitly listed
+- Confidence level is stated
 
 If these conditions cannot be met, the agent must stop and explain why.
 

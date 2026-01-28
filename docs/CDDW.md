@@ -13,7 +13,10 @@ last_modified: 2026-01-28
 
 ## Overview
 
-The **Context-Driven Development Workflow (CDDW)** is a disciplined, AI-aware workflow for software development in which **learning produced during implementation is treated as an explicit, reviewable, and consolidatable output of development**.
+The **Context-Driven Development Workflow (CDDW)** is a disciplined, AI-aware
+workflow for software development in which **learning produced during
+implementation is treated as an explicit, reviewable, and consolidatable
+output of development**.
 
 CDDW is designed for environments where:
 
@@ -22,7 +25,8 @@ CDDW is designed for environments where:
 - Software systems are expected to evolve over time without losing conceptual integrity
 
 CDDW does not replace design judgment or architectural thinking.  
-It provides a concrete structure for **capturing, validating, and integrating learning** that would otherwise remain implicit, local, or lost.
+It provides a concrete structure for **capturing, validating, and integrating
+learning** that would otherwise remain implicit, local, or lost.
 
 ---
 
@@ -32,8 +36,10 @@ CDDW is **not** Context-Driven Engineering.
 
 The relationship is intentional and asymmetric:
 
-- **CDE** defines a *conceptual framework* for treating context as the primary engineering artifact
-- **CDDW** defines *one possible workflow* for operationalizing context evolution during development
+- **CDE** defines a *conceptual framework* for treating context as the primary
+engineering artifact
+- **CDDW** defines *one possible workflow* for operationalizing context
+evolution during development
 
 CDE answers the question:
 
@@ -46,7 +52,8 @@ CDDW answers a different question:
 You can adopt CDE without CDDW.  
 You can experiment with CDDW without fully committing to CDE.  
 
-However, **CDDW only makes sense in projects where explicit context exists and is treated as authoritative**.
+However, **CDDW only makes sense in projects where explicit context exists and
+is treated as authoritative**.
 
 ---
 
@@ -80,7 +87,8 @@ CDDW exists to mitigate that risk.
 
 ### Learning
 
-In CDDW, *learning* refers to **new or corrected understanding** that emerges during development, including but not limited to:
+In CDDW, *learning* refers to **new or corrected understanding** that emerges
+during development, including but not limited to:
 
 - invalidated assumptions
 - newly discovered constraints
@@ -101,7 +109,8 @@ Learning is only relevant if it has **implications for shared context**.
 
 ### Learning Artifact
 
-A **Learning Artifact** is a structured, written record of learning produced during development.
+A **Learning Artifact** is a structured, written record of learning produced
+during development.
 
 Its purpose is to:
 
@@ -121,7 +130,9 @@ They are defined formally in `LEARNINGS.md`.
 
 ### Consolidation
 
-**Consolidation** is the act of integrating validated learning into authoritative context documents (such as DOMAIN.md, CONTEXT.md, ARCHITECTURE.md, SPEC.md).
+**Consolidation** is the act of integrating validated learning into
+authoritative context documents (such as DOMAIN.md, CONTEXT.md, ARCHITECTURE.md,
+SPEC.md).
 
 Consolidation:
 
@@ -266,7 +277,8 @@ The following rules are non-negotiable in CDDW:
 - Learning artifacts are not authoritative by default
 - AI agents may propose learning but may not consolidate it
 - Humans are accountable for context coherence
-- Context documents must reflect the best current understanding, not historical discovery
+- Context documents must reflect the best current understanding, not historical
+discovery
 
 If these invariants are violated, CDDW is not being practiced.
 

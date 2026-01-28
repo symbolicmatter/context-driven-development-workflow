@@ -22,8 +22,8 @@ Where traditional workflows assume that learning happens primarily in the heads 
 
 CDDW is **not** a replacement for Context-Driven Engineering (CDE), nor is it a mandatory interpretation of it.
 
-* **CDE** provides a *conceptual framework* for thinking about context, coherence, and meaning in software systems.
-* **CDDW** provides *one possible operationalization* of those ideas in an AI-heavy engineering environment.
+- **CDE** provides a *conceptual framework* for thinking about context, coherence, and meaning in software systems.
+- **CDDW** provides *one possible operationalization* of those ideas in an AI-heavy engineering environment.
 
 CDE is intentionally worldview-agnostic and non-prescriptive.
 CDDW is deliberately concrete and opinionated about **how development is conducted**, not about what software should be built.
@@ -41,10 +41,10 @@ As AI agents take on more implementation work, software teams face a growing ris
 
 Without explicit mechanisms to capture and consolidate that learning:
 
-* Context documents drift out of sync with reality
-* Decisions lose their rationale
-* Concepts fragment and silently diverge
-* Future agents (and humans) operate on outdated assumptions
+- Context documents drift out of sync with reality
+- Decisions lose their rationale
+- Concepts fragment and silently diverge
+- Future agents (and humans) operate on outdated assumptions
 
 CDDW addresses this by treating **learning as an explicit output of development**, enforced through a capture and consolidation loop embedded directly in the workflow.
 
@@ -54,11 +54,11 @@ CDDW addresses this by treating **learning as an explicit output of development*
 
 CDDW is built on a small set of non-negotiable principles:
 
-* **Development produces knowledge** — not just code
-* **Learning must be externalized** to be durable
-* **AI agents may discover insights, but are not the final authority**
-* **Humans remain responsible for meaning, coherence, and consolidation**
-* **Context evolves continuously and must be curated deliberately**
+- **Development produces knowledge** — not just code
+- **Learning must be externalized** to be durable
+- **AI agents may discover insights, but are not the final authority**
+- **Humans remain responsible for meaning, coherence, and consolidation**
+- **Context evolves continuously and must be curated deliberately**
 
 These principles are enforced through workflow design rather than intent or discipline alone.
 
@@ -68,17 +68,17 @@ These principles are enforced through workflow design rather than intent or disc
 
 **CDDW is:**
 
-* A lightweight but disciplined workflow
-* Explicitly designed for AI-assisted development
-* Focused on preserving organizational and conceptual coherence
-* Compatible with iterative and experimental development
+- A lightweight but disciplined workflow
+- Explicitly designed for AI-assisted development
+- Focused on preserving organizational and conceptual coherence
+- Compatible with iterative and experimental development
 
 **CDDW is not:**
 
-* A specification-first methodology
-* A documentation-heavy process
-* A replacement for architectural judgment
-* A claim that context can be fully known upfront
+- A specification-first methodology
+- A documentation-heavy process
+- A replacement for architectural judgment
+- A claim that context can be fully known upfront
 
 ---
 
@@ -101,11 +101,11 @@ Detailed responsibilities and rules are defined in the accompanying documents.
 
 This repository defines CDDW through a small set of focused documents:
 
-* `AGENTS.md` — rules and responsibilities for AI agents
-* `WORKFLOW.md` — the operational flow of CDDW
-* `LEARNINGS.md` — the required format for learning artifacts
-* `CONSOLIDATION.md` — how learning is reviewed and integrated
-* `CONTRIBUTING.md` — contribution rules and enforcement mechanisms
+- `AGENTS.md` — rules and responsibilities for AI agents
+- `WORKFLOW.md` — the operational flow of CDDW
+- `LEARNINGS.md` — the required format for learning artifacts
+- `CONSOLIDATION.md` — how learning is reviewed and integrated
+- `CONTRIBUTING.md` — contribution rules and enforcement mechanisms
 
 Each document has a single, well-defined purpose.
 
@@ -117,9 +117,9 @@ CDDW is an **experimental workflow**.
 
 It is intended to:
 
-* Be tested in real projects
-* Surface frictions and failure modes
-* Evolve through practice rather than theory
+- Be tested in real projects
+- Surface frictions and failure modes
+- Evolve through practice rather than theory
 
 If parts of this workflow prove ineffective, they should be revised or discarded.
 
