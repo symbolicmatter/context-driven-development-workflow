@@ -20,6 +20,9 @@ reviewable, and integrable into shared context.
 
 Contributions are welcome — but they are expected to respect the **conceptual integrity** of the workflow.
 
+By contributing, you agree that your contributions are licensed under CC
+BY-NC-SA 4.0.
+
 ---
 
 ## What This Repository Is

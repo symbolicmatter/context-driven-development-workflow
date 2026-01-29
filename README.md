@@ -10,6 +10,8 @@ last_modified: 2026-01-27
 ---
 # Context-Driven Development Workflow (CDDW)
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 Context-Driven Development Workflow (CDDW) is a **practical, operational workflow** for structuring software development as a continuous learning process in AI-assisted engineering environments.
 
 CDDW is designed for a world in which a significant portion of implementation work is performed by AI agents, with humans providing direction, review, and meaning-making.
@@ -124,6 +126,28 @@ It is intended to:
 If parts of this workflow prove ineffective, they should be revised or discarded.
 
 The goal is not methodological purity, but sustained coherence in AI-assisted software development.
+
+---
+
+## License
+
+This work is licensed under the  
+**Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format  
+- **Adapt** — remix, transform, and build upon the material  
+
+Under the following terms:
+
+- **Attribution** — You must give appropriate credit and indicate if changes were made  
+- **NonCommercial** — You may not use the material for commercial purposes  
+- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license  
+
+This license applies to **all conceptual content, documentation, and written material** in this repository unless explicitly stated otherwise.
+
+For the full legal text, see the [`LICENSE`](./LICENSE) file.
 
 ---
 
