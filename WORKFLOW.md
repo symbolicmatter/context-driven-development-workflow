@@ -1,14 +1,3 @@
----
-subject: CDDW
-description: Concise operational overview of the Context-Driven Development Workflow
-role: supporting
-priority: medium
-status: draft
-name: CDDW Workflow Overview
-path_name: CDDW/WORKFLOW.md
-last_modified: 2026-01-28
----
-
 # Context-Driven Development Workflow — Operational Flow
 
 This document focuses on the **dynamic behavior** of the Context-Driven Development Workflow:

@@ -1,14 +1,3 @@
----
-subject: CDDW
-description: Human-led process for reviewing and integrating learning into authoritative context
-role: supporting
-priority: high
-status: draft
-name: CDDW Consolidation
-path_name: CDDW/CONSOLIDATION.md
-last_modified: 2026-01-28
----
-
 # Consolidation
 
 ## Purpose

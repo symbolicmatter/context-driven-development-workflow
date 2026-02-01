@@ -1,14 +1,3 @@
----
-subject: CDDW
-description: Required format and constraints for learning artifacts in the Context-Driven Development Workflow
-role: supporting
-priority: high
-status: draft
-name: CDDW Learning Artifacts
-path_name: CDDW/LEARNINGS.md
-last_modified: 2026-01-28
----
-
 # Learning Artifacts
 
 ## Purpose

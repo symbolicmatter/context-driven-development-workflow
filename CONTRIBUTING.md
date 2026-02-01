@@ -1,14 +1,3 @@
----
-subject: CDDW
-description: Contribution guidelines for the Context-Driven Development Workflow repository
-role: supporting
-priority: medium
-status: draft
-name: CDDW Contributing Guidelines
-path_name: CDDW/CONTRIBUTING.md
-last_modified: 2026-01-28
----
-
 # Contributing to the Context-Driven Development Workflow (CDDW)
 
 Thank you for your interest in contributing.

@@ -1,13 +1,3 @@
----
-subject: CDDW
-description: Overview and positioning of the Context-Driven Development Workflow
-role: core
-priority: high
-status: active
-name: CDDW README
-path_name: CDDW/README.md
-last_modified: 2026-01-27
----
 # Context-Driven Development Workflow (CDDW)
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)

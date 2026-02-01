@@ -1,14 +1,3 @@
----
-subject: CDDW
-description: Canonical definition and operational model of the Context-Driven Development Workflow
-role: core
-priority: high
-status: draft
-name: CDDW Core Definition
-path_name: CDDW/docs/CDDW.md
-last_modified: 2026-01-28
----
-
 # Context-Driven Development Workflow (CDDW)
 
 ## Overview

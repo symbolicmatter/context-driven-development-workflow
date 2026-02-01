@@ -1,13 +1,3 @@
----
-subject: CDDW
-description: Definition of agent roles and responsibilities within the Context-Driven Development Workflow
-role: core
-priority: high
-status: active
-name: CDDW Agent Roles
-path_name: CDDW/AGENT_ROLES.md
-last_modified: 2026-01-27
----
 # Agent Roles and Responsibilities
 
 This document defines the **mandatory roles, responsibilities, and operating rules** for AI agents participating in a **Context-Driven Development Workflow (CDDW)**.
