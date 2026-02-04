@@ -65,6 +65,8 @@ If no such learning occurs, no artifact is required.
 
 If learning occurs and is not captured, the workflow is incomplete.
 
+Capture learning only when it affects behavior, domain meaning, architectural boundaries, or decisions about scope and design. Do not record observations that have no plausible impact on shared context or future work.
+
 ---
 
 ## Required Structure
@@ -166,6 +168,20 @@ List unresolved questions, if any.
 
 This section is optional.
 Do not force questions where none exist.
+
+---
+
+### 7. Consolidation Priority
+
+Indicate the urgency of consolidating this learning.
+
+Suggested values:
+
+- **high** — contradicts or significantly extends existing context; should be consolidated before next commitment point
+- **medium** — refines understanding but does not invalidate current work; consolidate when convenient
+- **low** — minor clarification or edge case; may be deferred or rejected during consolidation
+
+This helps triage learning artifacts during consolidation review.
 
 ---
 

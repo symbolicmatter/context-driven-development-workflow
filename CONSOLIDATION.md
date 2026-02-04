@@ -109,6 +109,14 @@ At a commitment point:
 
 Proceeding without consolidation at a commitment point is a stop condition.
 
+Consolidation is not required immediately. Learning may remain unconsolidated between commitment points as long as:
+
+- it is tracked in a learning artifact
+- it does not contradict active specifications or context
+- it does not block other work in progress
+
+At the next commitment point, all unconsolidated learning must be reviewed and processed (integrated, rejected, deferred, or reframed).
+
 ---
 
 ## The Consolidation Decision Space

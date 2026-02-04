@@ -112,6 +112,20 @@ Roles and behavioral expectations are defined in `AGENT_ROLES.md`.
 
 ---
 
+## Learning Capture Discipline
+
+When multiple learnings emerge from a single discovery event:
+
+- Capture each learning that meets the threshold defined in `LEARNINGS.md`
+- Keep each artifact focused on a single concern
+- Use the "Consolidation Priority" field to indicate urgency
+
+Multiple focused artifacts are preferable to one overloaded artifact or lost insights.
+
+The goal is clarity, not minimalism.
+
+---
+
 ## What This Workflow Optimizes For
 
 CDDW optimizes for:
