@@ -123,6 +123,68 @@ Learning does **not** become authoritative automatically.
 
 The consolidation process is defined in `CONSOLIDATION.md`.
 
+## Context Coherence and Integrity
+
+Long-lived AI-assisted projects risk gradual drift between declared context (DOMAIN, ARCHITECTURE, SPEC, LEARNINGS) and the evolving codebase.
+
+CDDW addresses this risk through a principle of **Context Coherence**.
+
+Context Coherence refers to the degree to which:
+
+- Implementation reflects declared domain concepts  
+- Architecture matches structural reality  
+- Decisions remain traceable  
+- Learning is consolidated into authoritative documents  
+- Context remains trustworthy over time
+
+Coherence is not assumed. It must be periodically assessed.
+
+### The CDE Integrity Auditor
+
+CDDW introduces an optional but strongly recommended review mechanism: the **CDE Integrity Auditor**.
+
+The Auditor evaluates the alignment between context and implementation and produces a structured Coherence Report.
+
+This mechanism:
+
+- Does not modify code or documents  
+- Does not block builds  
+- Does not enforce thresholds  
+- Encourages discipline through visibility
+
+The goal is not bureaucratic compliance, but sustained clarity.
+
+### Coherence Dimensions
+
+The Auditor evaluates coherence across three dimensions:
+
+1. **Traceability**  
+
+   - Are code artifacts linked to domain and specification concepts?  
+   - Are implemented features traceable to declared intent?
+
+2. **Context Freshness**  
+
+   - Do recent structural changes appear in ARCHITECTURE?  
+   - Are LEARNINGS consolidated?  
+   - Is context lagging behind implementation?
+
+3. **Alignment & Drift**  
+
+   - Do new abstractions exist in code but not in DOMAIN?  
+   - Does the actual structure diverge from declared architecture?  
+   - Are repeated patterns undocumented?
+
+Each dimension is rated on a **1–5 Coherence Level scale**.
+
+An optional overall Coherence Level may be derived for overview purposes.
+
+### Design Principle
+
+CDDW treats coherence as a living property of a system.
+
+The responsibility for maintaining coherence remains human. The Auditor provides structured visibility.
+
 ## The CDDW Lifecycle
 
 CDDW structures development as a repeating cycle with four phases:

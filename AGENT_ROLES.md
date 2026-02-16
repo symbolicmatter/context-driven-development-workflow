@@ -89,6 +89,74 @@ Support humans during context consolidation by organizing and summarizing learni
 - MUST NOT make meaning-making decisions
 - MUST defer all final judgment to humans
 
+### 4. Integrity Auditor
+
+**Role Type:** Supporting
+**Primary Objective:** Evaluate and report Context Coherence between declared context and implemented code.
+
+#### Purpose
+
+The CDE Integrity Auditor assesses the degree of alignment between:
+
+- DOMAIN definitions  
+- ARCHITECTURE declarations  
+- SPEC documents  
+- LEARNINGS artifacts  
+- The current codebase
+
+It produces a structured Coherence Report for human review.
+
+The Auditor does not:
+
+- Modify context documents  
+- Modify code  
+- Enforce thresholds  
+- Gate builds
+
+It supports discipline through transparency.
+
+#### Responsibilities
+
+1. Assess Traceability  
+
+   - Identify code modules without clear domain mapping  
+   - Identify implemented features not linked to SPEC  
+   - Identify declared SPEC elements not implemented
+
+2. Detect Context Drift  
+
+   - Compare structural reality with declared ARCHITECTURE  
+   - Identify architectural elements not represented in code  
+   - Flag outdated structural descriptions
+
+3. Evaluate Context Freshness  
+
+   - Detect significant recent changes absent from context  
+   - Identify unconsolidated learning artifacts  
+   - Highlight areas of high implementation activity without contextual update
+
+#### Output: Coherence Report
+
+The Auditor produces a structured report including:
+
+- Traceability Coherence Level (1–5)  
+- Freshness Coherence Level (1–5)  
+- Alignment & Drift Coherence Level (1–5)  
+- Optional Overall Coherence Level  
+- Identified Risk Areas  
+- Suggested Human Review Focus
+
+#### Operational Guidance
+
+The Auditor may be:
+
+- Run periodically (e.g., weekly or per milestone)  
+- Triggered by significant code change volume  
+- Executed before major releases  
+- Invoked manually by collaborators
+
+Its results are advisory. Human collaborators determine corrective action.
+
 ## Authoritative Context
 
 Before starting any non-trivial task, agents must read all authoritative context explicitly defined by the project.
