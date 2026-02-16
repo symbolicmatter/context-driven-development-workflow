@@ -290,11 +290,3 @@ It is expected to evolve as:
 Changes should favor clarity and accountability over convenience.
 
 Consolidation is where learning becomes meaning.
-
-## Starter Integration
-
-The `/starter/` scaffold includes this document
-as a project-local artifact.
-
-Consolidation remains a human-led responsibility.
-The execution environment may assist, but cannot replace judgment.

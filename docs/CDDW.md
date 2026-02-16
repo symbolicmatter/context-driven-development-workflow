@@ -291,7 +291,7 @@ That trade-off must be intentional.
 CDDW is tool-agnostic by design.
 
 This repository includes a reference implementation under `/starter/`
-that integrates CDDW with Roo Code as an execution environment.
+that integrates CDDW with a specific execution environment (currently Roo Code).
 
 Other execution environments may be developed in the future.
 

@@ -177,6 +177,6 @@ Execution without learning is considered incomplete.
 Agent roles defined here are conceptual.
 
 In the `/starter/` reference implementation,
-these roles are mapped to Roo Code modes and orchestration rules.
+these roles are mapped to execution environment specific modes and orchestration rules.
 
 The mapping is implementation-specific and does not alter the conceptual role definitions.
