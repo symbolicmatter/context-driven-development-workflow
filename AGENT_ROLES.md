@@ -171,3 +171,12 @@ When in doubt, prioritize:
 3. Exposing uncertainty
 
 Execution without learning is considered incomplete.
+
+## Execution Environment Mapping
+
+Agent roles defined here are conceptual.
+
+In the `/starter/` reference implementation,
+these roles are mapped to Roo Code modes and orchestration rules.
+
+The mapping is implementation-specific and does not alter the conceptual role definitions.

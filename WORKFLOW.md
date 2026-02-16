@@ -161,3 +161,16 @@ judgment explicit,
 and context durable.
 
 If the loop breaks, coherence decays.
+
+## Using the Starter
+
+A versioned starter kit is available under `/starter/`.
+
+It scaffolds a project with:
+
+- Snapshot CDDW documents
+- Roo Code configuration
+- Structured Human/AI workflow integration
+
+The starter reflects the workflow defined in this document,
+but projects may adapt the workflow as needed.

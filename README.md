@@ -106,6 +106,24 @@ This repository defines CDDW through a small set of focused documents:
 
 Each document has a single, well-defined purpose.
 
+## Reference Implementation: CDDW Starter (Roo Code)
+
+This repository contains a versioned starter kit under `/starter/`.
+
+The starter provides:
+
+- A scaffolded project structure
+- Snapshot copies of canonical CDDW documents
+- A preconfigured Roo Code environment
+- Custom agent modes aligned with `AGENT_ROLES.md`
+
+The starter is intentionally opinionated and uses Roo Code as the reference execution environment.
+
+CDDW itself remains tool-agnostic at the definition level.
+The starter is an operational embodiment of the discipline.
+
+To bootstrap a new project, use the starter at a specific repository tag.
+
 ## Status and Intent
 
 CDDW is an **experimental workflow**.

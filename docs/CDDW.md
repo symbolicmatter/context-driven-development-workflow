@@ -286,6 +286,15 @@ CDDW may be unsuitable when:
 CDDW trades speed for coherence.  
 That trade-off must be intentional.
 
+## Operational Embodiments
+
+CDDW is tool-agnostic by design.
+
+This repository includes a reference implementation under `/starter/`
+that integrates CDDW with Roo Code as an execution environment.
+
+Other execution environments may be developed in the future.
+
 ## Status of This Document
 
 This document defines the **intended behavior** of CDDW.

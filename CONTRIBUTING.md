@@ -106,6 +106,16 @@ require explicit discussion.
 4. Explain trade-offs.
    If a change simplifies something, state what is lost.
 
+## Starter Contributions
+
+Changes to `/starter/` should:
+
+- Preserve separation between discipline definition and tooling
+- Avoid introducing Roo-specific language into core documents
+- Maintain version coherence between root documents and scaffold copies
+
+The starter is a reference implementation, not the definition of CDDW.
+
 ## AI-Assisted Contributions
 
 AI-assisted contributions are allowed.
