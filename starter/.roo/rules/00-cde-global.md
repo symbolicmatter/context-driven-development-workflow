@@ -8,3 +8,9 @@ Silence in the face of ambiguity is a failure mode.
 **AGENTS.md is authoritative** for all AI agents operating in this repository.
 
 If multiple instructions conflict, the **more restrictive** instruction takes precedence.
+
+## Markdown Formatting Discipline
+
+All generated or modified Markdown artifacts MUST comply with the rules defined in `MARKDOWN_STYLE.md`.
+
+Do not introduce formatting styles not defined in that guide. If uncertain, prefer the simplest valid Markdown consistent with the style guide.
