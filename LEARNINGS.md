@@ -80,6 +80,10 @@ Every learning artifact **must** follow the structure below.
 
 Sections may be brief, but **must not be omitted**.
 
+### 0. Title
+
+Descriptive and informative, not persuasive.
+
 ### 1. Context
 
 Identify the **scope** in which the learning occurred.
