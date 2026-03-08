@@ -1,5 +1,7 @@
 # Baseline Exception Handling Guideline
 
+Responsibility: Define the cross-platform architectural rules for classifying, logging, translating, and exposing exceptions in software systems.
+
 ## 1. Treat exceptions as part of architecture, not just syntax
 
 Exception handling must make three things clear:
@@ -10,7 +12,7 @@ Exception handling must make three things clear:
 
 Do not let language syntax dictate the architecture.
 
-# 2. Separate failures into three categories
+## 2. Separate failures into three categories
 
 ### A. Programming errors
 
@@ -48,7 +50,7 @@ Guidelines:
 - Log them once with sufficient diagnostic context
 - Translate them into a higher-level exception appropriate for the caller
 
-# 3. Catch at the right boundary
+## 3. Catch at the right boundary
 
 Catch exceptions only when one of the following applies:
 
@@ -59,7 +61,7 @@ Catch exceptions only when one of the following applies:
 
 Do not catch exceptions merely because the language allows it.
 
-# 4. Log once, with full diagnostic value
+## 4. Log once, with full diagnostic value
 
 A logged exception must contain enough information to investigate the issue without guesswork.
 
@@ -71,7 +73,7 @@ Include:
 - full exception details
 - stack trace
 
-Avoid duplicate logging across layers.
+Avoid duplicate logging across layers. An exception should normally be logged **exactly once** in the system.
 
 ### Reference Identifiers
 
@@ -99,11 +101,11 @@ Benefits:
 
 Technologies such as **TypeID, UUIDv7-based identifiers, ULIDs, or similar schemes** are suitable. The specific implementation is platform-dependent.
 
-# 5. Error Correlation and Identifier Roles
+## 5. Error Correlation and Identifier Roles
 
 Modern systems use several identifiers for observability. These identifiers serve **different purposes** and should not be confused.
 
-## Error Reference ID
+### Error Reference ID
 
 Identifies a **single failure instance**.
 
@@ -131,7 +133,7 @@ User-facing message:
 Unable to retrieve invoice data (Ref: error_01h8z3k2j1n7v8m9c0p4s5t6u7)
 ```
 
-## Request ID
+### Request ID
 
 Identifies a **single request or execution context**.
 
@@ -175,7 +177,7 @@ Characteristics:
 - propagated between services
 - shared across all spans in the trace
 
-## Span ID
+### Span ID
 
 A **Span ID** identifies a single operation within a trace.
 
@@ -199,7 +201,7 @@ Trace
 
 Span IDs are primarily used by tracing systems and are usually not surfaced to users.
 
-## Identifier Relationship
+### Identifier Relationship
 
 These identifiers operate at different scopes.
 
@@ -226,6 +228,49 @@ Example:
 }
 ```
 
+### Error Lifecycle
+
+Failure handling follows a consistent lifecycle.  
+Identifiers appear at different stages of execution and serve different purposes.
+
+```txt
+Request begins
+(request_id generated)
+(trace_id generated if tracing enabled)
+        ↓
+Operation executes
+(span_id created for each step)
+        ↓
+Failure occurs
+        ↓
+Catch at boundary
+(context is richest here)
+        ↓
+Log failure
+(error_id generated)
+(request_id, trace_id, span_id included if available)
+        ↓
+Translate exception
+(implementation details removed)
+        ↓
+Expose safe error message
+(error_id returned to caller/user)
+```
+
+This lifecycle illustrates how identifiers interact during error handling.
+
+Key principles:
+
+- `error_id` identifies a **specific failure instance**.
+- `request_id` identifies the **execution context**.
+- `trace_id` identifies the **distributed execution path**.
+- `span_id` identifies the **specific operation that failed**.
+
+When available, logs should include all identifiers to maximize diagnostic value.
+User-facing responses should expose **only the `error_id`**.
+
+Operational rule: **always log the failure before translating the exception**, so that full diagnostic context is preserved.
+
 ### Practical guideline
 
 At minimum:
@@ -237,7 +282,7 @@ At minimum:
 
 This separation improves debugging, observability, and incident response.
 
-# 6. Translate exceptions across boundaries
+## 6. Translate exceptions across boundaries
 
 When moving between layers, translate exceptions to match the abstraction of the receiving layer.
 
@@ -262,7 +307,7 @@ Bad:
 SQL timeout while querying invoices table
 ```
 
-# 7. Decide explicitly whether to preserve the original cause
+## 7. Decide explicitly whether to preserve the original cause
 
 There is no universal rule.
 
@@ -280,7 +325,7 @@ Break the chain when:
 
 The key requirement is **consistency across the system**.
 
-# 8. Platform boundaries must translate to native outcomes
+## 8. Platform boundaries must translate to native outcomes
 
 At system boundaries, exceptions must be converted into the platform’s native error model.
 
@@ -303,16 +348,16 @@ An unexpected error occurred. Please contact support and provide reference ID: e
 
 Never leak low-level technical exceptions across system boundaries unless that is an explicit design decision.
 
-# 9. Avoid these anti-patterns
+## 9. Avoid these anti-patterns
 
 - swallowing exceptions
 - logging the same failure multiple times
 - catching overly broad exceptions too early
 - using exceptions for normal control flow
 - exposing low-level technical details to callers or users
-- inventing artificial checked/unchecked semantics without architectural value
+- inventing artificial checked/unchecked exception models
 
-# 10. The governing question
+## 10. The governing question
 
 For every exception rule, ask:
 
