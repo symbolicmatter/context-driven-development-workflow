@@ -24,6 +24,7 @@ Default discovery order:
 3. CONTEXT.md
 4. PLAN.md
 5. ARCHITECTURE.md
+6. BACKLOG.md (when coordination needs justify it)
 
 Discovery roles are responsible for protecting the problem domain from premature structural decisions. They may identify architectural tensions, but must not resolve them structurally.
 
@@ -238,6 +239,48 @@ Instructions:
 - Surface conflicts instead of silently resolving them.
 ```
 
+# Phase 6 – BACKLOG Setup (Optional but Recommended)
+
+## Precondition
+
+BACKLOG.md should be introduced only once:
+
+- intent is explicit enough to prioritize work
+- structural boundaries are stable enough to avoid speculative task decomposition
+- the project needs visible coordination across slices, contributors, or disciplines
+
+## Goal
+
+Create a lightweight operational work queue that connects planning intent to concrete specifications.
+
+## Discipline
+
+BACKLOG.md:
+
+- defines candidate and selected work
+- may track active specs, blocked work, and completed items
+- must not redefine scope from PRODUCT.md
+- must not redefine sequencing intent from PLAN.md
+- must not absorb architectural or domain decisions
+
+## Example Prompt
+
+Use the appropriate coordination role.
+
+```md
+Please draft BACKLOG.md as a lightweight operational coordination file.
+
+Before drafting:
+- Load PRODUCT.md, PLAN.md, and ARCHITECTURE.md if present.
+- Identify near-term work, likely spec candidates, blocked items, and possible work lanes.
+
+Instructions:
+- Keep items short and actionable.
+- Do not include detailed design.
+- Make active work and spec candidates easy to scan.
+- If the project is small and sequential, keep the backlog minimal.
+```
+
 # Index Management During Discovery
 
 ## Rule
@@ -268,7 +311,7 @@ It does not predict it.
 
 # State Transitions (Conceptual)
 
-Bootstrapping → Domain Clarification → Constraint Clarification → Sequencing → Architecture Stabilization → Implementation
+Bootstrapping → Domain Clarification → Constraint Clarification → Sequencing → Architecture Stabilization → Backlog Coordination → Implementation
 
 This guide assumes linear progression for clarity.
 In practice, discovery is iterative.

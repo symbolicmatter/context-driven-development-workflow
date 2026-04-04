@@ -10,7 +10,9 @@ A reference implementation of this workflow is available under `/starter/`.
 ## Contents
 
 - [Workflow Dynamics](#workflow-dynamics)
+- [Planning and Backlog Coordination](#planning-and-backlog-coordination)
 - [The Development–Learning Cycle](#the-developmentlearning-cycle)
+- [Parallel Work Lanes](#parallel-work-lanes)
 - [Commitment Points](#commitment-points)
 - [Relationship to CDE Commitment Points](#relationship-to-cde-commitment-points)
 - [Responsibilities at a Glance](#responsibilities-at-a-glance)
@@ -28,27 +30,41 @@ It is a **cyclical workflow with an explicit commitment boundary**.
 Some activities may repeat freely.
 Others are mandatory before commitment is allowed.
 
+## Planning and Backlog Coordination
+
+CDDW distinguishes between:
+
+- **Planning** — defining sequencing, milestones, commitment strategy, and major risks
+- **Backlog Coordination** — maintaining the current operational queue of candidate, selected, blocked, active, and completed work
+- **Task Definition** — turning a selected work item into a bounded specification or equivalent execution contract
+
+These responsibilities must not be collapsed into a single document.
+
+In projects with small or mostly sequential work, backlog coordination may remain minimal.  
+In projects with parallel work, BACKLOG.md is the preferred coordination surface between PLAN.md and active SPECs.
+
 ## The Development–Learning Cycle
 
 ```mermaid
 flowchart TD
-    A[Task Definition]
-    B[Implementation]
-    C[Learning Capture]
+    P[Planning]
+    B[Backlog Coordination]
+    S[Specification / Task Definition]
+    I[Implementation]
+    L[Learning Capture]
 
     subgraph Exploration ["Exploration Cycle"]
-        A --> B --> C --> B
-        C --> A
+        P --> B --> S --> I --> L
+        L --> I
+        L --> S
+        B --> S
     end
 
-    C --> D[Context Consolidation]
-
-    D --> G["Consistency Gate<br/>(Commitment Point)"]
-
+    L --> C[Context Consolidation]
+    C --> G["Consistency Gate (Commitment Point)"]
     G -->|Pass| E[Continue Development]
-    G -->|Fail| D
-
-    E --> A
+    G -->|Fail| C
+    E --> B
 ```
 
 ### How to Read This Diagram
@@ -68,6 +84,20 @@ flowchart TD
 - Context Consolidation may occur opportunistically during exploration,
   but becomes mandatory when approaching a commitment point.
 
+### Parallel Work Lanes
+
+When multiple contributors or agents work in parallel, backlog coordination should make active work explicit.
+
+Recommended minimal discipline:
+
+- keep active items visible in one shared backlog
+- separate active work into lanes when this reduces ambiguity
+- ensure each non-trivial active item links to a dedicated spec
+- do not begin work that depends on unresolved shared-context contradictions
+
+The goal is not process overhead.  
+The goal is to prevent parallel implementation from creating invisible drift.
+
 ## Commitment Points
 
 At certain moments, higher discipline is required.
@@ -78,6 +108,8 @@ Typical commitment points include:
 - preparing a release
 - handing work to another contributor or agent
 - extending existing behavior
+
+In projects using a backlog, the handoff state of active items and active specs must also be current before commitment is allowed.
 
 At commitment points:
 

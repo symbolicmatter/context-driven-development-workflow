@@ -107,6 +107,32 @@ Learning artifacts are:
 
 They are defined formally in `LEARNINGS.md`.
 
+### Backlog
+
+A **Backlog** is a lightweight coordination artifact that tracks candidate, selected, blocked, and completed work items.
+
+Its purpose is to:
+
+- make near-term work visible
+- provide a controlled funnel from planning to specification
+- support coordination when multiple contributors or agents work in parallel
+
+A backlog is:
+
+- operational and mutable
+- subordinate to authoritative context
+- intentionally lightweight
+
+A backlog is **not**:
+
+- a design document
+- a substitute for planning
+- a specification
+- an authority on domain or architectural meaning
+
+Backlog items may originate from plans, discovered needs, defects, or operational pressures.  
+When a backlog item becomes non-trivial or behaviorally significant, it should be externalized into a dedicated specification before implementation proceeds.
+
 ### Consolidation
 
 **Consolidation** is the act of integrating validated learning into
@@ -132,6 +158,15 @@ CDDW structures development as a repeating cycle with four phases:
 3. **Learning Capture**
 4. **Context Consolidation**
 
+In projects with non-trivial or parallel work, task definition is typically preceded by:
+
+- **Planning** — defines sequencing, milestones, and commitment intent
+- **Backlog Coordination** — maintains the current queue of candidate, selected, blocked, and in-flight work
+
+This preserves a clear flow:
+
+PRODUCT / context → PLAN → BACKLOG → SPEC / task definition → implementation → learning capture → consolidation
+
 This is not a linear process with a fixed end state.  
 It is a **continuous loop** that operates throughout the lifetime of a system.
 
@@ -144,10 +179,12 @@ A *task* is a bounded unit of work that is expected to produce:
 
 Tasks may originate from:
 
-- plans
+- prioritized backlog items
 - specifications
 - bug reports
 - exploratory spikes
+
+In disciplined use of CDDW, non-trivial work should normally flow through the backlog before it becomes an implementation task.
 
 A task is considered incomplete until:
 
@@ -229,6 +266,20 @@ At defined points (for example before merging or release):
 - required consolidation is verified
 
 Unconsolidated learning at commitment points is a stop condition.
+
+## Parallel Work and Coordination
+
+CDDW permits parallel work, but does not treat unconstrained parallelism as free.
+
+When multiple contributors or agents work simultaneously:
+
+- active work should be visible in the backlog
+- parallel streams should be separated into explicit lanes where helpful (for example frontend, backend, integration, or cross-cutting)
+- each non-trivial active work item should be traceable to a specification
+- work that affects shared domain or architectural meaning must not proceed on silent assumptions
+
+Parallel execution increases the risk of drift, conflicting interpretations, and unconsolidated learning.  
+The backlog exists to make that coordination load visible without turning planning, specification, and implementation into the same document.
 
 ## Invariants of the Workflow
 

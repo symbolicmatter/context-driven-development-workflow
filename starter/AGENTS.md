@@ -17,6 +17,13 @@ It defines how you must behave. It is not advisory.
 
 If instructions conflict or intent is unclear, **stop and ask**. Do not guess.
 
+If multiple active specs or work lanes exist:
+
+- identify which backlog item and spec you are executing against
+- do not switch lanes silently
+- do not infer priority from file order or convenience
+- surface collisions with shared context explicitly
+
 ## 1. Your Role as an AI Agent
 
 You exist in this project to **execute documented intent**, not to invent direction, architecture, or scope.
@@ -73,6 +80,15 @@ Before performing any design-affecting task, you must:
 If you cannot access a required document, you must stop and ask.
 
 See `CDE_INDEX.md` for the authoritative context load order.
+
+When BACKLOG.md exists, load it after PLAN.md and before active SPECs.
+
+Interpret it correctly:
+
+- BACKLOG.md coordinates work
+- it does not redefine domain meaning
+- it does not override architecture
+- it does not replace a required SPEC
 
 ## 3. Context Hierarchy (Mandatory Read Order)
 

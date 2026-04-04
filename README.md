@@ -92,6 +92,9 @@ At a high level, CDDW introduces four recurring phases within the development li
 
 These phases repeat continuously, ensuring that learning remains visible, reviewable, and actionable.
 
+In projects with non-trivial or parallel work, these recurring phases are typically preceded by lightweight planning and backlog coordination.  
+In that operating model, PLAN.md defines sequencing and commitment intent, BACKLOG.md coordinates current work, and SPECs define bounded behavioral contracts for implementation.
+
 Detailed responsibilities and rules are defined in the accompanying documents.
 
 ## Repository Structure
@@ -103,6 +106,7 @@ This repository defines CDDW through a small set of focused documents:
 - `LEARNINGS.md` — the required format for learning artifacts
 - `CONSOLIDATION.md` — how learning is reviewed and integrated
 - `CONTRIBUTING.md` — contribution rules and enforcement mechanisms
+- `starter/BACKLOG.md` — reference backlog template for operational coordination in active projects
 
 Each document has a single, well-defined purpose.
 

@@ -87,6 +87,8 @@ Execute a clearly defined task and surface all learning that emerges during impl
 - Respect declared architectural constraints
 - Surface trade-offs instead of resolving them silently
 - Produce a Learning Artifact at the end of the task
+- Keep the execution state of the relevant backlog item current when the project uses a backlog
+- Maintain traceability between active backlog items and related specifications
 
 **Constraints**
 
@@ -94,6 +96,9 @@ Execute a clearly defined task and surface all learning that emerges during impl
 - MUST NOT invent or redefine domain concepts
 - MUST NOT resolve ambiguity by assumption
 - MUST record contradictions, invalidated assumptions, and uncertainty explicitly
+- MUST NOT reprioritize backlog items without explicit human direction
+- MUST NOT promote vague ideas into active work autonomously
+- MUST NOT use the backlog as a substitute for a required specification
 
 ### 4. Review Agent (optional, future work)
 
@@ -144,6 +149,8 @@ Context is authoritative. Code is derivative.
 If required context is missing, contradictory, or ambiguous, agents must stop and request clarification.
 
 Agents may not compensate for missing context by inventing structure, abstractions, or intent.
+
+When BACKLOG.md exists, it is an operational coordination input, not an authoritative source of domain or architectural truth.
 
 ## Context Read Order (Conceptual)
 
