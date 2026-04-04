@@ -6,6 +6,22 @@
 >
 > This is a normative document. It defines required behavior, not guidance.
 
+## Upstream CDE Access
+
+This repository depends on Context-Driven Engineering (CDE) as its conceptual foundation.
+
+When working on CDDW itself in ways that affect conceptual meaning, terminology, workflow invariants, authority boundaries, or the relationship between CDE and CDDW, you must retrieve and read the relevant CDE sources listed in `CDE_SOURCES.yml` before proceeding.
+
+This retrieval is required only for deep work on CDDW itself. It is not required for routine or purely local changes that do not affect conceptual or workflow meaning.
+
+You must not:
+
+- redefine CDE concepts locally
+- approximate CDE meaning from memory
+- silently diverge from upstream concepts when the relevant sources are available
+
+If a required CDE source cannot be retrieved, stop and state what is missing and why it is needed.
+
 ## Relationship to AGENT_ROLES.md
 
 This document defines **how agents must behave when operating on the CDDW repository itself**.
