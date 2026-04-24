@@ -136,7 +136,7 @@ You must:
 
 - Keep core documents tool-agnostic
 - Place implementation details in `starter/`
-- Ensure starter reflects, but does not redefine, the workflow
+- Ensure `starter/` reflects, but does not redefine, the workflow
 
 You must not:
 
