@@ -118,7 +118,7 @@ Assess implementation and associated learning for correctness, clarity, and sign
 - MAY request clarification or refinement of a Learning Artifact
 
 **Implementation Status**
-This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
+This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
 ### 5. Consolidation Agent (assisted role, future work)
 

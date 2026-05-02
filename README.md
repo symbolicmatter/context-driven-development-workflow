@@ -110,7 +110,7 @@ This repository defines CDDW through a small set of focused documents:
 
 Each document has a single, well-defined purpose.
 
-## Reference Implementation: CDDW Starter (Roo Code)
+## Reference Implementation: CDDW Starter
 
 This repository contains a versioned starter kit under `/starter/`.
 
@@ -118,10 +118,10 @@ The starter provides:
 
 - A scaffolded project structure
 - Snapshot copies of canonical CDDW documents
-- A preconfigured Roo Code environment
+- A preconfigured Kilo Code environment
 - Custom agent modes aligned with `AGENT_ROLES.md`
 
-The starter is intentionally opinionated and uses Roo Code as the reference execution environment.
+The starter is intentionally opinionated and uses Kilo Code as the reference execution environment.
 
 CDDW itself remains tool-agnostic at the definition level.
 The starter is an operational embodiment of the discipline.
@@ -218,15 +218,14 @@ software design, meaning, and emerging AI-assisted development practices.
   - [LEARNING-process-discovery-model.md](./learnings/LEARNING-process-discovery-model.md)
   - [LEARNING-process-domain.md](./learnings/LEARNING-process-domain.md)
 - [starter](./starter)
-  - [.roo](./starter/.roo)
-    - [rules](./starter/.roo/rules)
-      - [00-cde-global.md](./starter/.roo/rules/00-cde-global.md)
+  - [.kilo](./starter/.kilo)
+    - [rules](./starter/.kilo/rules)
+      - [00-cde-global.md](./starter/.kilo/rules/00-cde-global.md)
   - [learnings](./starter/learnings)
     - [.gitkeep](./starter/learnings/.gitkeep)
   - [specs](./starter/specs)
     - [.gitkeep](./starter/specs/.gitkeep)
-  - [.rooignore](./starter/.rooignore)
-  - [.roomodes](./starter/.roomodes)
+  - [.kilocodeignore](./starter/.kilocodeignore)
   - [AGENTS.md](./starter/AGENTS.md)
   - [CDE_INDEX.md](./starter/CDE_INDEX.md)
   - [CONTRIBUTING.md](./starter/CONTRIBUTING.md)
@@ -234,7 +233,6 @@ software design, meaning, and emerging AI-assisted development practices.
   - [TESTING_STRATEGY.md](./starter/TESTING_STRATEGY.md)
 - [.gitignore](./.gitignore)
 - [.markdownlint.json](./.markdownlint.json)
-- [.roomodes](./.roomodes)
 - [AGENT_ROLES.md](./AGENT_ROLES.md)
 - [CONSOLIDATION.md](./CONSOLIDATION.md)
 - [CONTRIBUTING.md](./CONTRIBUTING.md)

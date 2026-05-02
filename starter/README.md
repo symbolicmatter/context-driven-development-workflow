@@ -1,11 +1,11 @@
-# CDDW Starter (Roo Code Reference Implementation)
+# CDDW Starter (Kilo Code Reference Implementation)
 
 This directory contains the **opinionated, versioned starter scaffold** for the Context-Driven Development Workflow (CDDW).
 
 It is intended to bootstrap a new project with:
 
 - The canonical CDDW discipline artifacts (snapshot at this repository version)
-- A preconfigured Roo Code environment
+- A preconfigured Kilo Code environment
 - A structured Human/AI collaboration model
 - Explicit learning and consolidation mechanics
 
@@ -16,7 +16,7 @@ This starter is designed for serious software projects where architectural integ
 This starter provides a deployable project skeleton that:
 
 - Embeds CDDW as an operational discipline
-- Integrates Roo Code as the AI execution environment
+- Integrates Kilo Code as the AI execution environment
 - Makes context a first-class artifact from day one
 - Supports enterprise-grade development practices
 
@@ -32,9 +32,9 @@ When you scaffold a project from tag `vX.Y.Z`, you get the exact CDDW snapshot f
 
 This is a deliberate, structured workflow for hybrid Human/AI development in real projects.
 
-## Why Roo Code?
+## Why Kilo Code?
 
-This starter uses Roo Code as the reference execution environment because:
+This starter uses Kilo Code as the reference execution environment because:
 
 - It is highly configurable.
 - It supports multiple custom modes.
@@ -44,7 +44,7 @@ This starter uses Roo Code as the reference execution environment because:
 
 CDDW is **tool-agnostic at the definition level**, but this starter is intentionally opinionated to reduce onboarding friction and ensure predictable behavior.
 
-If Roo Code evolves or is replaced in the future, this layer can be refactored without changing the core CDDW discipline.
+If Kilo Code evolves or is replaced in the future, this layer can be refactored without changing the core CDDW discipline.
 
 ## What Gets Scaffolded
 
@@ -55,7 +55,7 @@ Running the starter initialization script will create a new project root contain
 - `WORKFLOW.md`
 - `LEARNINGS.md`
 - `CONSOLIDATION.md`
-- `.roo/` configuration (custom modes + orchestration)
+- `.kilo/` configuration (custom modes + orchestration)
 - Supporting directory structure for disciplined development
 
 All Markdown files are copied as a **snapshot** from this repository version.

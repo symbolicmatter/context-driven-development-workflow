@@ -111,7 +111,7 @@ require explicit discussion.
 Changes to `/starter/` should:
 
 - Preserve separation between discipline definition and tooling
-- Avoid introducing Roo-specific language into core documents
+- Avoid introducing tool specific language into core documents
 - Maintain version coherence between root documents and scaffold copies
 
 The starter is a reference implementation, not the definition of CDDW.

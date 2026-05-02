@@ -1,6 +1,6 @@
 ---
 description: >-
-  Use when working on the CDDW repository itself to refine the workflow, improve operational clarity, evolve agent roles, strengthen document coherence, update the starter reference implementation in line with the core workflow, or keep CDE/CDDW boundaries explicit. Use it for changes that affect CDDW documents, Roo Code operationalization, starter structure, contribution discipline, or consistency between conceptual and operational artifacts. Do not use for ordinary application development in another repository, or for purely mechanical changes unrelated to workflow meaning.
+  Use when working on the CDDW repository itself to refine the workflow, improve operational clarity, evolve agent roles, strengthen document coherence, update the starter reference implementation in line with the core workflow, or keep CDE/CDDW boundaries explicit. Use it for changes that affect CDDW documents, Kilo Code operationalization, starter structure, contribution discipline, or consistency between conceptual and operational artifacts. Do not use for ordinary application development in another repository, or for purely mechanical changes unrelated to workflow meaning.
 mode: primary
 color: "#f4a261"
 permission:
