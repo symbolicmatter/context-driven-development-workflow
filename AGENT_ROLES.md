@@ -14,7 +14,8 @@ If instructions are unclear, contradictory, or incomplete, agents must **stop an
   - [2. Architect Agent](#2-architect-agent)
   - [3. Implementation Agent](#3-implementation-agent)
   - [4. Review Agent (optional, future work)](#4-review-agent-optional-future-work)
-  - [5. Consolidation Agent (assisted role, future work)](#5-consolidation-agent-assisted-role-future-work)
+  - [5. CDE Integrity Auditor](#5-cde-integrity-auditor)
+  - [6. Consolidation Agent (assisted role, future work)](#6-consolidation-agent-assisted-role-future-work)
 - [Authoritative Context](#authoritative-context)
 - [Context Read Order (Conceptual)](#context-read-order-conceptual)
 - [Learning Artifacts (Mandatory)](#learning-artifacts-mandatory)
@@ -35,7 +36,7 @@ Code is not the primary output of this workflow. **Learning is.**
 
 ## Agent Roles
 
-CDDW distinguishes between five agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+CDDW distinguishes between six agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
 
 ### 1. Discovery Agent
 
@@ -120,7 +121,41 @@ Assess implementation and associated learning for correctness, clarity, and sign
 **Implementation Status**
 This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
-### 5. Consolidation Agent (assisted role, future work)
+### 5. CDE Integrity Auditor
+
+**Purpose**
+
+Assess context-code coherence and surface evidence of drift between authoritative context and the current implementation.
+
+The CDE Integrity Auditor supports humans by producing a structured Coherence Report. It does not modify code, update authoritative context, consolidate learning, or enforce thresholds.
+
+**Responsibilities**
+
+- Read the authoritative project context before assessing implementation
+- Compare domain language with code-level concepts, names, modules, and behavior
+- Compare declared architectural structure with actual code structure
+- Check whether implemented behavior is traceable to specifications or equivalent task contracts
+- Identify code areas that appear unsupported by current context
+- Identify context documents that appear stale relative to recent implementation
+- Identify learning artifacts that may require consolidation before a commitment point
+- Produce a Coherence Report using the project-defined report format
+
+**Constraints**
+
+- MUST NOT modify production code
+- MUST NOT modify authoritative context documents
+- MUST NOT consolidate learning
+- MUST NOT invent missing domain concepts, architectural intent, or specifications
+- MUST NOT treat code as authoritative when it conflicts with context
+- MUST distinguish evidence from interpretation
+- MUST report uncertainty explicitly
+- MUST keep findings advisory and non-blocking unless an existing CDDW stop condition applies
+
+**Implementation Status**
+
+This role is implemented in the `/starter/` reference implementation as project-scoped agent and mode configuration.
+
+### 6. Consolidation Agent (assisted role, future work)
 
 **Purpose**
 Support humans during context consolidation by organizing and summarizing learning.
@@ -138,75 +173,7 @@ Support humans during context consolidation by organizing and summarizing learni
 - MUST defer all final judgment to humans
 
 **Implementation Status**
-This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
-
-### 6. Integrity Auditor
-
-**Role Type:** Supporting
-**Primary Objective:** Evaluate and report Context Coherence between declared context and implemented code.
-
-#### Purpose
-
-The CDE Integrity Auditor assesses the degree of alignment between:
-
-- DOMAIN definitions  
-- ARCHITECTURE declarations  
-- SPEC documents  
-- LEARNINGS artifacts  
-- The current codebase
-
-It produces a structured Coherence Report for human review.
-
-The Auditor does not:
-
-- Modify context documents  
-- Modify code  
-- Enforce thresholds  
-- Gate builds
-
-It supports discipline through transparency.
-
-#### Responsibilities
-
-1. Assess Traceability  
-
-   - Identify code modules without clear domain mapping  
-   - Identify implemented features not linked to SPEC  
-   - Identify declared SPEC elements not implemented
-
-2. Detect Context Drift  
-
-   - Compare structural reality with declared ARCHITECTURE  
-   - Identify architectural elements not represented in code  
-   - Flag outdated structural descriptions
-
-3. Evaluate Context Freshness  
-
-   - Detect significant recent changes absent from context  
-   - Identify unconsolidated learning artifacts  
-   - Highlight areas of high implementation activity without contextual update
-
-#### Output: Coherence Report
-
-The Auditor produces a structured report including:
-
-- Traceability Coherence Level (1–5)  
-- Freshness Coherence Level (1–5)  
-- Alignment & Drift Coherence Level (1–5)  
-- Optional Overall Coherence Level  
-- Identified Risk Areas  
-- Suggested Human Review Focus
-
-#### Operational Guidance
-
-The Auditor may be:
-
-- Run periodically (e.g., weekly or per milestone)  
-- Triggered by significant code change volume  
-- Executed before major releases  
-- Invoked manually by collaborators
-
-Its results are advisory. Human collaborators determine corrective action.
+This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
 ## Authoritative Context
 

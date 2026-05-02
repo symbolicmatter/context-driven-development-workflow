@@ -13,4 +13,8 @@ Authoritative documents (read in order):
 6. AGENTS.md
 7. specs/SPEC-*.md (as applicable)
 
+Operational references (read when applicable):
+
+- INTEGRITY_AUDIT.md (for integrity audit tasks)
+
 Agents must not proceed with partial context.

@@ -101,7 +101,8 @@ Detailed responsibilities and rules are defined in the accompanying documents.
 
 This repository defines CDDW through a small set of focused documents:
 
-- `AGENTS.md` — rules and responsibilities for AI agents
+- `AGENTS.md` — rules for AI agents operating on this repository
+- `AGENT_ROLES.md` — CDDW agent roles, including the CDE Integrity Auditor
 - `WORKFLOW.md` — the operational flow of CDDW
 - `LEARNINGS.md` — the required format for learning artifacts
 - `CONSOLIDATION.md` — how learning is reviewed and integrated
@@ -120,6 +121,7 @@ The starter provides:
 - Snapshot copies of canonical CDDW documents
 - A preconfigured Kilo Code environment
 - Custom agent modes aligned with `AGENT_ROLES.md`
+- A lightweight Integrity Audit guide and Coherence Report template
 
 The starter is intentionally opinionated and uses Kilo Code as the reference execution environment.
 

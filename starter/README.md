@@ -55,7 +55,9 @@ Running the starter initialization script will create a new project root contain
 - `WORKFLOW.md`
 - `LEARNINGS.md`
 - `CONSOLIDATION.md`
+- `INTEGRITY_AUDIT.md`
 - `.kilo/` configuration (custom modes + orchestration)
+- `.claude/` agent configuration
 - Supporting directory structure for disciplined development
 
 All Markdown files are copied as a **snapshot** from this repository version.

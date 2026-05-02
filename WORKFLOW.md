@@ -15,6 +15,7 @@ A reference implementation of this workflow is available under `/starter/`.
 - [Parallel Work Lanes](#parallel-work-lanes)
 - [Commitment Points](#commitment-points)
 - [Relationship to CDE Commitment Points](#relationship-to-cde-commitment-points)
+- [Integrity Audits](#integrity-audits)
 - [Responsibilities at a Glance](#responsibilities-at-a-glance)
 - [Learning Capture Discipline](#learning-capture-discipline)
 - [What This Workflow Optimizes For](#what-this-workflow-optimizes-for)
@@ -135,6 +136,32 @@ At these points:
 CDDW provides a concrete mechanism for satisfying this requirement
 by making learning capture and consolidation non-optional inputs to the gate.
 
+## Integrity Audits
+
+A CDE Integrity Audit is an optional but recommended workflow activity that assesses whether context and implementation remain coherent over time.
+
+Integrity audits are especially useful:
+
+- before major releases
+- before handoff to another contributor or agent
+- after significant implementation volume
+- after multiple parallel work lanes have been active
+- when humans suspect that context is becoming stale
+- before or during consolidation work
+
+An integrity audit does not replace the Consistency Gate at a commitment point. It provides input to human review by making likely drift visible earlier.
+
+The audit produces a Coherence Report containing:
+
+- Traceability Level
+- Context Freshness Level
+- Architecture Alignment Level
+- Learning Consolidation Level
+- Overall Coherence Level, when useful
+- evidence, risks, uncertainty, and suggested human review focus
+
+The report is advisory. Humans decide whether to consolidate context, revise specifications, update architecture, create follow-up work, or accept the current state.
+
 ## Responsibilities at a Glance
 
 | Phase                 | Primary Responsibility |
@@ -142,6 +169,7 @@ by making learning capture and consolidation non-optional inputs to the gate.
 | Task Definition       | Human                  |
 | Implementation        | Human and/or AI agent  |
 | Learning Capture      | Implementation role    |
+| Integrity Audit       | CDE Integrity Auditor  |
 | Context Consolidation | Human                  |
 
 Roles and behavioral expectations are defined in `AGENT_ROLES.md`.

@@ -149,7 +149,7 @@ Learning does **not** become authoritative automatically.
 
 The consolidation process is defined in `CONSOLIDATION.md`.
 
-## Context Coherence and Integrity
+## Context Coherence and Integrity Auditing
 
 Long-lived AI-assisted projects risk gradual drift between declared context (DOMAIN, ARCHITECTURE, SPEC, LEARNINGS) and the evolving codebase.
 
@@ -160,7 +160,7 @@ Context Coherence refers to the degree to which:
 - Implementation reflects declared domain concepts  
 - Architecture matches structural reality  
 - Decisions remain traceable  
-- Learning is consolidated into authoritative documents  
+- Learning is captured and consolidated into authoritative documents
 - Context remains trustworthy over time
 
 Coherence is not assumed. It must be periodically assessed.
@@ -169,7 +169,7 @@ Coherence is not assumed. It must be periodically assessed.
 
 CDDW introduces an optional but strongly recommended review mechanism: the **CDE Integrity Auditor**.
 
-The Auditor evaluates the alignment between context and implementation and produces a structured Coherence Report.
+The Auditor evaluates the alignment between context and implementation and produces a structured Coherence Report for human review.
 
 This mechanism:
 
@@ -182,7 +182,7 @@ The goal is not bureaucratic compliance, but sustained clarity.
 
 ### Coherence Dimensions
 
-The Auditor evaluates coherence across three dimensions:
+The Auditor evaluates coherence across four dimensions:
 
 1. **Traceability**  
 
@@ -195,15 +195,21 @@ The Auditor evaluates coherence across three dimensions:
    - Are LEARNINGS consolidated?  
    - Is context lagging behind implementation?
 
-3. **Alignment & Drift**  
+3. **Architecture Alignment**
 
    - Do new abstractions exist in code but not in DOMAIN?  
    - Does the actual structure diverge from declared architecture?  
    - Are repeated patterns undocumented?
 
+4. **Learning Consolidation**
+
+   - Has implementation learning been captured where required?
+   - Are learning artifacts awaiting human consolidation?
+   - Does unconsolidated learning affect a commitment point?
+
 Each dimension is rated on a **1–5 Coherence Level scale**.
 
-An optional overall Coherence Level may be derived for overview purposes.
+An optional overall Coherence Level may be derived for overview purposes. When used, it should not average away serious weakness in any dimension.
 
 ### Design Principle
 
@@ -328,6 +334,16 @@ At defined points (for example before merging or release):
 - required consolidation is verified
 
 Unconsolidated learning at commitment points is a stop condition.
+
+### Integrity Audit Role
+
+Responsible for:
+
+- assessing coherence between authoritative context and implementation evidence
+- surfacing drift, stale context, weak traceability, and unconsolidated learning signals
+- producing an advisory Coherence Report for human review
+
+This role may be fulfilled by AI agents, but it does not own consolidation or final judgment.
 
 ## Parallel Work and Coordination
 
