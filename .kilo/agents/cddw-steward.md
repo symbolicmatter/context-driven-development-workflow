@@ -5,7 +5,11 @@ mode: primary
 color: "#f4a261"
 permission:
   edit: allow
-  bash: ask
+  bash:
+    "*": ask
+    "git diff *": allow
+    "git log *": allow
+    "git status *": allow
   task: ask
 ---
 
