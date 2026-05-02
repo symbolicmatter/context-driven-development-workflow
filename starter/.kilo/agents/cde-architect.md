@@ -2,6 +2,7 @@
 description: >-
   Use when work requires architectural reasoning or interpretation of documented intent — designing or revising architecture, interpreting PRODUCT, DOMAIN, CONTEXT, or ARCHITECTURE documents, assessing impact of proposed changes, or preparing architectural proposals. Do not use for writing production code, mechanical refactoring, exploratory spikes, or implementation tasks without architectural impact.
 mode: primary
+color: "#2a9d8f"
 permission:
   edit: allow
   bash: deny

@@ -1,7 +1,8 @@
 ---
 description: >-
   Use when implementing behavior that is already specified and architecturally understood — writing production code, modifying existing code to satisfy a SPEC, fixing bugs with clearly defined intent, or carrying out tasks that have passed architectural interpretation. Do not use to interpret product intent, resolve ambiguity in specifications, make design or scope decisions, or modify authoritative context documents.
-mode: primary
+mode: all
+color: "#e76f51"
 permission:
   edit: allow
   bash: ask

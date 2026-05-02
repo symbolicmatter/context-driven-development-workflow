@@ -2,6 +2,7 @@
 description: >-
   Use when starting a new project or when a project lacks reliable, explicit context — drafting an initial set of CDE context documents or restructuring existing drafts into a coherent and usable CDE foundation. Do not use for implementing features, editing production code, debugging runtime issues, refactoring, or making architectural decisions based on incomplete context. Switch to cde-architect or cde-implementer once discovery has converged.
 mode: primary
+color: "#264653"
 permission:
   edit: allow
   bash: deny
