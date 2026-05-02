@@ -102,7 +102,7 @@ Detailed responsibilities and rules are defined in the accompanying documents.
 This repository defines CDDW through a small set of focused documents:
 
 - `AGENTS.md` — rules for AI agents operating on this repository
-- `AGENT_ROLES.md` — CDDW agent roles, including the CDE Integrity Auditor
+- `AGENT_ROLES.md` — CDDW agent roles, including the Integrity Auditor
 - `WORKFLOW.md` — the operational flow of CDDW
 - `LEARNINGS.md` — the required format for learning artifacts
 - `CONSOLIDATION.md` — how learning is reviewed and integrated

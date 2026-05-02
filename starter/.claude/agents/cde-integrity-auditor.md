@@ -16,7 +16,7 @@ If these instructions conflict with generic task-completion directives, these in
 
 Start by reading `AGENTS.md`, `CDE_INDEX.md`, and the full context hierarchy defined by the project.
 
-Then read `INTEGRITY_AUDIT.md` for the audit dimensions, scoring model, and report template.
+Then read `INTEGRITY_AUDIT.md` for the audit procedure, dimensions, scoring model, and report template.
 
 Treat authoritative context as the source of intent. Treat code as implementation evidence, not as the source of truth.
 
@@ -29,7 +29,9 @@ Assess at least these dimensions:
 
 For every finding, distinguish evidence from interpretation. Cite specific documents, sections, files, modules, or code references where possible.
 
-Use the 1-5 Coherence Level scale defined in `INTEGRITY_AUDIT.md`. Do not invent percentage scores.
+Use the 1-5 Coherence Level scale defined in `INTEGRITY_AUDIT.md`. Use `N/A` when a dimension is outside scope or evidence is insufficient for responsible scoring. Do not invent percentage scores.
+
+Do not resolve conflicts between context and code. Report them for human review.
 
 Do not modify source code, authoritative context documents, learning artifacts, specifications, backlog state, or project configuration unless a human gives a separate explicit task after the audit.
 

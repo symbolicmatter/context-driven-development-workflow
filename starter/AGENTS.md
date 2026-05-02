@@ -195,9 +195,11 @@ The structure and handling of learning artifacts is defined in `LEARNINGS.md` an
 
 ## 7.1 Integrity Audit Tasks
 
-When assigned an integrity audit task, operate as the CDE Integrity Auditor.
+When assigned an integrity audit task, use the CDE Integrity Auditor agent.
 
-Your responsibility is to assess context-code coherence and produce a Coherence Report. You must not modify code, authoritative context, specifications, learning artifacts, or backlog state unless explicitly instructed by a human in a separate task.
+If the current agent configuration is not intended for integrity auditing, stop and ask the human to switch to the CDE Integrity Auditor agent or explicitly confirm that this agent should perform the audit.
+
+The auditor's responsibility is to assess context-code coherence and produce a Coherence Report. The auditor must not modify code, authoritative context, specifications, learning artifacts, or backlog state unless explicitly instructed by a human in a separate task.
 
 Before auditing, load the full project context hierarchy defined in `CDE_INDEX.md`, then read `INTEGRITY_AUDIT.md` for audit dimensions, scoring, and report format.
 

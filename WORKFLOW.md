@@ -151,14 +151,7 @@ Integrity audits are especially useful:
 
 An integrity audit does not replace the Consistency Gate at a commitment point. It provides input to human review by making likely drift visible earlier.
 
-The audit produces a Coherence Report containing:
-
-- Traceability Level
-- Context Freshness Level
-- Architecture Alignment Level
-- Learning Consolidation Level
-- Overall Coherence Level, when useful
-- evidence, risks, uncertainty, and suggested human review focus
+The audit produces a Coherence Report using the project-defined integrity audit reference, such as `INTEGRITY_AUDIT.md` in the starter. The report summarizes coherence levels, evidence, risks, uncertainty, and suggested human review focus.
 
 The report is advisory. Humans decide whether to consolidate context, revise specifications, update architecture, create follow-up work, or accept the current state.
 
@@ -169,7 +162,7 @@ The report is advisory. Humans decide whether to consolidate context, revise spe
 | Task Definition       | Human                  |
 | Implementation        | Human and/or AI agent  |
 | Learning Capture      | Implementation role    |
-| Integrity Audit       | CDE Integrity Auditor  |
+| Integrity Audit       | AI agent.              |
 | Context Consolidation | Human                  |
 
 Roles and behavioral expectations are defined in `AGENT_ROLES.md`.

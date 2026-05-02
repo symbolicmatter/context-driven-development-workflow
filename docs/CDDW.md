@@ -165,9 +165,9 @@ Context Coherence refers to the degree to which:
 
 Coherence is not assumed. It must be periodically assessed.
 
-### The CDE Integrity Auditor
+### The Integrity Auditor
 
-CDDW introduces an optional but strongly recommended review mechanism: the **CDE Integrity Auditor**.
+CDDW introduces an optional but strongly recommended review mechanism: the **Integrity Auditor**.
 
 The Auditor evaluates the alignment between context and implementation and produces a structured Coherence Report for human review.
 
@@ -191,8 +191,8 @@ The Auditor evaluates coherence across four dimensions:
 
 2. **Context Freshness**  
 
-   - Do recent structural changes appear in ARCHITECTURE?  
-   - Are LEARNINGS consolidated?  
+   - Do recent structural changes appear in ARCHITECTURE?
+   - Do specifications still describe current behavior?
    - Is context lagging behind implementation?
 
 3. **Architecture Alignment**
@@ -207,9 +207,11 @@ The Auditor evaluates coherence across four dimensions:
    - Are learning artifacts awaiting human consolidation?
    - Does unconsolidated learning affect a commitment point?
 
-Each dimension is rated on a **1–5 Coherence Level scale**.
+Each assessed dimension is rated on a lightweight **1–5 Coherence Level scale**.
 
 An optional overall Coherence Level may be derived for overview purposes. When used, it should not average away serious weakness in any dimension.
+
+The Integrity Auditor role is defined in `AGENT_ROLES.md`.
 
 ### Design Principle
 
@@ -335,16 +337,6 @@ At defined points (for example before merging or release):
 
 Unconsolidated learning at commitment points is a stop condition.
 
-### Integrity Audit Role
-
-Responsible for:
-
-- assessing coherence between authoritative context and implementation evidence
-- surfacing drift, stale context, weak traceability, and unconsolidated learning signals
-- producing an advisory Coherence Report for human review
-
-This role may be fulfilled by AI agents, but it does not own consolidation or final judgment.
-
 ## Parallel Work and Coordination
 
 CDDW permits parallel work, but does not treat unconstrained parallelism as free.
@@ -420,7 +412,7 @@ That trade-off must be intentional.
 CDDW is tool-agnostic by design.
 
 This repository includes a reference implementation under `/starter/`
-that integrates CDDW with a specific execution environment (currently Kilo Code).
+that integrates CDDW with a specific execution environment.
 
 Other execution environments may be developed in the future.
 

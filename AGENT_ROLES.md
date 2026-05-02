@@ -14,7 +14,7 @@ If instructions are unclear, contradictory, or incomplete, agents must **stop an
   - [2. Architect Agent](#2-architect-agent)
   - [3. Implementation Agent](#3-implementation-agent)
   - [4. Review Agent (optional, future work)](#4-review-agent-optional-future-work)
-  - [5. CDE Integrity Auditor](#5-cde-integrity-auditor)
+  - [5. Integrity Auditor](#5-integrity-auditor)
   - [6. Consolidation Agent (assisted role, future work)](#6-consolidation-agent-assisted-role-future-work)
 - [Authoritative Context](#authoritative-context)
 - [Context Read Order (Conceptual)](#context-read-order-conceptual)
@@ -37,6 +37,8 @@ Code is not the primary output of this workflow. **Learning is.**
 ## Agent Roles
 
 CDDW distinguishes between six agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+
+The Review Agent evaluates a specific implementation change. The Integrity Auditor evaluates broader context-code coherence over time.
 
 ### 1. Discovery Agent
 
@@ -121,13 +123,13 @@ Assess implementation and associated learning for correctness, clarity, and sign
 **Implementation Status**
 This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
-### 5. CDE Integrity Auditor
+### 5. Integrity Auditor
 
 **Purpose**
 
 Assess context-code coherence and surface evidence of drift between authoritative context and the current implementation.
 
-The CDE Integrity Auditor supports humans by producing a structured Coherence Report. It does not modify code, update authoritative context, consolidate learning, or enforce thresholds.
+The Integrity Auditor supports humans by producing a structured Coherence Report. It does not modify code, update authoritative context, consolidate learning, or enforce thresholds.
 
 **Responsibilities**
 
@@ -147,13 +149,14 @@ The CDE Integrity Auditor supports humans by producing a structured Coherence Re
 - MUST NOT consolidate learning
 - MUST NOT invent missing domain concepts, architectural intent, or specifications
 - MUST NOT treat code as authoritative when it conflicts with context
+- MUST NOT resolve conflicts between context and code; it must report them for human review
 - MUST distinguish evidence from interpretation
 - MUST report uncertainty explicitly
 - MUST keep findings advisory and non-blocking unless an existing CDDW stop condition applies
 
 **Implementation Status**
 
-This role is implemented in the `/starter/` reference implementation as project-scoped agent and mode configuration.
+Reference starter implementations may provide project-scoped agent configuration for this role. The role definition in this document remains authoritative.
 
 ### 6. Consolidation Agent (assisted role, future work)
 
