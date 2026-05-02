@@ -1,0 +1,25 @@
+---
+index_version: 1
+authority: canonical
+context_documents:
+  - name: CDE Core Definition
+    url: https://raw.githubusercontent.com/symbolicmatter/context-driven-engineering/refs/heads/main/docs/CDE.md
+    subject: CDE
+    description: Canonical definition of Context-Driven Engineering
+    role: core
+    priority: high
+    status: active
+  - name: CDE Explained
+    url: https://raw.githubusercontent.com/symbolicmatter/context-driven-engineering/refs/heads/main/docs/CDE_EXPLAINED.md
+    subject: CDE
+    description: System-level mental model and rationale behind Context-Driven Engineering
+    role: core
+    priority: high
+    status: active
+  - name: CDE Templates
+    url: https://raw.githubusercontent.com/symbolicmatter/context-driven-engineering/refs/heads/main/docs/CDE_TEMPLATES.md
+    subject: CDE
+    description: Reusable document templates for applying Context-Driven Engineering
+    role: supporting
+    priority: low
+    status: active

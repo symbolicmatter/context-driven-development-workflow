@@ -1,0 +1,10 @@
+# Ignore files and directories that should not be accessed by Roo Code.
+#
+# This file uses the same syntax as .gitignore. You can specify files and directories to ignore by listing them here.
+#
+# Common examples:
+#
+# build/
+# node_modules/
+# *.log
+# .env*

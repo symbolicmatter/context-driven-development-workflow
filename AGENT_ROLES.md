@@ -10,9 +10,11 @@ If instructions are unclear, contradictory, or incomplete, agents must **stop an
 
 - [Core Principle](#core-principle)
 - [Agent Roles](#agent-roles)
-  - [1. Implementation Agent](#1-implementation-agent)
-  - [2. Review Agent (optional)](#2-review-agent-optional)
-  - [3. Consolidation Agent (assisted role)](#3-consolidation-agent-assisted-role)
+  - [1. Discovery Agent](#1-discovery-agent)
+  - [2. Architect Agent](#2-architect-agent)
+  - [3. Implementation Agent](#3-implementation-agent)
+  - [4. Review Agent (optional, future work)](#4-review-agent-optional-future-work)
+  - [5. Consolidation Agent (assisted role, future work)](#5-consolidation-agent-assisted-role-future-work)
 - [Authoritative Context](#authoritative-context)
 - [Context Read Order (Conceptual)](#context-read-order-conceptual)
 - [Learning Artifacts (Mandatory)](#learning-artifacts-mandatory)
@@ -33,9 +35,47 @@ Code is not the primary output of this workflow. **Learning is.**
 
 ## Agent Roles
 
-CDDW distinguishes between three agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+CDDW distinguishes between five agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
 
-### 1. Implementation Agent
+### 1. Discovery Agent
+
+**Purpose**
+Help establish or clarify the minimal set of context documents required for coherent work.
+
+**Responsibilities**
+
+- Surface missing context, unclear intent, and implicit assumptions
+- Help draft or refine initial context documents without inventing unsupported detail
+- Keep discovery focused on problem framing and conceptual clarity
+- Preserve consistency across context documents as they emerge
+
+**Constraints**
+
+- MUST NOT write production code or implementation scaffolding
+- MUST NOT make architectural decisions on incomplete context
+- MUST NOT invent domain concepts, scope, or constraints
+- MUST stop and ask when required context cannot be drafted responsibly
+
+### 2. Architect Agent
+
+**Purpose**
+Interpret established context and produce architectural proposals that are traceable to it.
+
+**Responsibilities**
+
+- Read and interpret authoritative context before proposing structure
+- Produce reviewable architectural proposals derived from documented intent
+- Surface ambiguity, alternative interpretations, and architectural trade-offs explicitly
+- Preserve conceptual integrity by keeping proposals within documented boundaries
+
+**Constraints**
+
+- MUST NOT invent requirements, intent, or domain rules
+- MUST NOT convert ambiguity into silent assumptions
+- MUST NOT make final architectural decisions autonomously
+- MUST stop when required context is missing, contradictory, or underspecified
+
+### 3. Implementation Agent
 
 **Purpose**
 Execute a clearly defined task and surface all learning that emerges during implementation.
@@ -47,6 +87,8 @@ Execute a clearly defined task and surface all learning that emerges during impl
 - Respect declared architectural constraints
 - Surface trade-offs instead of resolving them silently
 - Produce a Learning Artifact at the end of the task
+- Keep the execution state of the relevant backlog item current when the project uses a backlog
+- Maintain traceability between active backlog items and related specifications
 
 **Constraints**
 
@@ -54,8 +96,11 @@ Execute a clearly defined task and surface all learning that emerges during impl
 - MUST NOT invent or redefine domain concepts
 - MUST NOT resolve ambiguity by assumption
 - MUST record contradictions, invalidated assumptions, and uncertainty explicitly
+- MUST NOT reprioritize backlog items without explicit human direction
+- MUST NOT promote vague ideas into active work autonomously
+- MUST NOT use the backlog as a substitute for a required specification
 
-### 2. Review Agent (optional)
+### 4. Review Agent (optional, future work)
 
 **Purpose**
 Assess implementation and associated learning for correctness, clarity, and signal-to-noise ratio.
@@ -72,7 +117,10 @@ Assess implementation and associated learning for correctness, clarity, and sign
 - MUST NOT reinterpret or consolidate learning
 - MAY request clarification or refinement of a Learning Artifact
 
-### 3. Consolidation Agent (assisted role)
+**Implementation Status**
+This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
+
+### 5. Consolidation Agent (assisted role, future work)
 
 **Purpose**
 Support humans during context consolidation by organizing and summarizing learning.
@@ -89,7 +137,10 @@ Support humans during context consolidation by organizing and summarizing learni
 - MUST NOT make meaning-making decisions
 - MUST defer all final judgment to humans
 
-### 4. Integrity Auditor
+**Implementation Status**
+This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
+
+### 6. Integrity Auditor
 
 **Role Type:** Supporting
 **Primary Objective:** Evaluate and report Context Coherence between declared context and implemented code.
@@ -167,6 +218,8 @@ If required context is missing, contradictory, or ambiguous, agents must stop an
 
 Agents may not compensate for missing context by inventing structure, abstractions, or intent.
 
+When BACKLOG.md exists, it is an operational coordination input, not an authoritative source of domain or architectural truth.
+
 ## Context Read Order (Conceptual)
 
 When authoritative context is present, agents should read it in the following conceptual order:
@@ -239,3 +292,12 @@ When in doubt, prioritize:
 3. Exposing uncertainty
 
 Execution without learning is considered incomplete.
+
+## Execution Environment Mapping
+
+Agent roles defined here are conceptual.
+
+In the `/starter/` reference implementation,
+these roles are mapped to execution environment specific modes and orchestration rules.
+
+The mapping is implementation-specific and does not alter the conceptual role definitions.

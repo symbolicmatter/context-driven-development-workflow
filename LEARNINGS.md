@@ -6,6 +6,7 @@
 - [What a Learning Artifact Is](#what-a-learning-artifact-is)
 - [What a Learning Artifact Is Not](#what-a-learning-artifact-is-not)
 - [When a Learning Artifact Is Required](#when-a-learning-artifact-is-required)
+- [File Naming and Traceability](#file-naming-and-traceability)
 - [Required Structure](#required-structure)
 - [Style and Constraints](#style-and-constraints)
 - [Authority and Lifecycle](#authority-and-lifecycle)
@@ -74,11 +75,81 @@ If learning occurs and is not captured, the workflow is incomplete.
 
 Capture learning only when it affects behavior, domain meaning, architectural boundaries, or decisions about scope and design. Do not record observations that have no plausible impact on shared context or future work.
 
+## File Naming and Traceability
+
+Learning artifacts must be **chronologically traceable**.
+
+To ensure consistent ordering and easier consolidation, filenames must follow the convention:
+
+`YYYY-MM-DD__learning__short-title.md`
+
+Example:
+
+`2026-02-24__learning__api-consistency-assumption.md`
+
+Guidelines:
+
+- Use the **date the learning was captured**, not when the underlying issue began.
+- Keep titles concise but descriptive.
+- Avoid encoding conclusions or judgments in the title.
+
+Chronological naming allows consolidation reviews to process artifacts **in the order they emerged during development**.
+
 ## Required Structure
 
 Every learning artifact **must** follow the structure below.
 
 Sections may be brief, but **must not be omitted**.
+
+### 0. Title
+
+Descriptive and informative, not persuasive.
+
+### Metadata
+
+A metadata block must appear immediately after the title.
+
+This block enables consolidation triage and historical traceability.
+
+Recommended fields:
+
+- **Created** — timestamp of artifact creation  
+- **Confidence** — confidence in the learning (see explanation below)  
+- **Consolidation Priority** — urgency for consolidation review  
+- **Related Context** (optional) — relevant documents or areas of the system
+
+Example:
+
+```
+Created: 2026-02-24
+Confidence: medium
+Consolidation Priority: high
+Related Context: DOMAIN.md, ARCHITECTURE.md
+````
+
+#### Confidence
+
+Indicates how confident the author is in the learning.
+
+Suggested values:
+
+- **low** — tentative observation; requires further validation
+- **medium** — credible but not yet fully verified
+- **high** — strong evidence supports this learning
+
+Confidence helps consolidation calibrate the required rigor of review.
+
+#### Consolidation Priority
+
+Indicates the urgency of consolidating this learning.
+
+Suggested values:
+
+- **high** — contradicts or significantly extends existing context; should be consolidated before the next commitment point
+- **medium** — refines understanding but does not invalidate current work; consolidate when convenient
+- **low** — minor clarification or edge case; may be deferred or rejected during consolidation
+
+Priority helps triage learning artifacts during consolidation review.
 
 ### 1. Context
 
@@ -143,36 +214,12 @@ Possible targets:
 Do **not** propose specific edits.
 Focus on *impact*, not solution.
 
-### 5. Confidence
-
-Indicate how confident you are in this learning.
-
-Suggested values:
-
-- low
-- medium
-- high
-
-This helps consolidation calibrate rigor.
-
-### 6. Open Questions (Optional)
+### 5. Open Questions (Optional)
 
 List unresolved questions, if any.
 
 This section is optional.
 Do not force questions where none exist.
-
-### 7. Consolidation Priority
-
-Indicate the urgency of consolidating this learning.
-
-Suggested values:
-
-- **high** — contradicts or significantly extends existing context; should be consolidated before next commitment point
-- **medium** — refines understanding but does not invalidate current work; consolidate when convenient
-- **low** — minor clarification or edge case; may be deferred or rejected during consolidation
-
-This helps triage learning artifacts during consolidation review.
 
 ## Style and Constraints
 
@@ -202,10 +249,12 @@ Learning artifacts:
 
 After consolidation:
 
-- artifacts may be archived or removed
-- their contents live on only through updated context
+- artifacts should be **archived**, not deleted
+- their contents live on through updated context or consolidation notes
 
-Learning artifacts are **ephemeral by design**.
+Learning artifacts are **ephemeral working inputs**, but they remain valuable historical evidence of how understanding evolved.
+
+Repositories should therefore **retain archived artifacts** to preserve the chronological learning record.
 
 ## Common Failure Modes
 
@@ -223,11 +272,21 @@ Typical issues with learning artifacts include:
 - **Missing implications**
   Recording insight without surfacing its impact on shared context.
 
+- **Unanchored artifacts**
+  Artifacts without clear creation time or contextual reference, making consolidation and chronology difficult.
+
 If consolidation struggles, inspect the learning artifacts first.
 
 ## Minimal Example (Illustrative)
 
 ```md
+# API Retry Behavior Invalidates Idempotency Assumption
+
+Created: 2026-02-24
+Confidence: high
+Consolidation Priority: medium
+Related Context: DOMAIN.md, SPEC/payment-processing.md
+
 ## Context
 - SPEC/payment-processing.md
 - DOMAIN.md
@@ -243,9 +302,9 @@ Retries can trigger duplicate charges.
 - Specification may need to clarify idempotency guarantees.
 - Architecture may need explicit deduplication.
 
-## Confidence
-High
-```
+## Open Questions
+- Can the provider expose retry metadata?
+````
 
 ## Status of This Document
 

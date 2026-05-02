@@ -92,6 +92,9 @@ At a high level, CDDW introduces four recurring phases within the development li
 
 These phases repeat continuously, ensuring that learning remains visible, reviewable, and actionable.
 
+In projects with non-trivial or parallel work, these recurring phases are typically preceded by lightweight planning and backlog coordination.  
+In that operating model, PLAN.md defines sequencing and commitment intent, BACKLOG.md coordinates current work, and SPECs define bounded behavioral contracts for implementation.
+
 Detailed responsibilities and rules are defined in the accompanying documents.
 
 ## Repository Structure
@@ -103,8 +106,27 @@ This repository defines CDDW through a small set of focused documents:
 - `LEARNINGS.md` — the required format for learning artifacts
 - `CONSOLIDATION.md` — how learning is reviewed and integrated
 - `CONTRIBUTING.md` — contribution rules and enforcement mechanisms
+- `starter/BACKLOG.md` — reference backlog template for operational coordination in active projects
 
 Each document has a single, well-defined purpose.
+
+## Reference Implementation: CDDW Starter (Roo Code)
+
+This repository contains a versioned starter kit under `/starter/`.
+
+The starter provides:
+
+- A scaffolded project structure
+- Snapshot copies of canonical CDDW documents
+- A preconfigured Roo Code environment
+- Custom agent modes aligned with `AGENT_ROLES.md`
+
+The starter is intentionally opinionated and uses Roo Code as the reference execution environment.
+
+CDDW itself remains tool-agnostic at the definition level.
+The starter is an operational embodiment of the discipline.
+
+To bootstrap a new project, use the starter at a specific repository tag.
 
 ## Status and Intent
 
@@ -153,6 +175,14 @@ Several areas of CDDW are under active development and will be integrated increm
 
 This repository reflects the *current best understanding* of how to preserve conceptual coherence in AI-assisted development. It is expected to evolve through use, not through speculation.
 
+## Influences
+
+CDDW evolves in dialogue with ongoing industry experimentation and discussion around AI-assisted software engineering.
+
+External articles, case studies, and public discussions that have influenced refinements are recorded in [`INFLUENCES.md`](./INFLUENCES.md).
+
+These sources have shaped clarifications and refinements over time.
+
 ## License
 
 This work is licensed under the  
@@ -179,3 +209,37 @@ This work is published and maintained by **Symbolic Matter**.
 
 Symbolic Matter is a research-driven studio exploring the intersection of
 software design, meaning, and emerging AI-assisted development practices.
+
+## Repository index
+
+- [docs](./docs)
+  - [CDDW.md](./docs/CDDW.md)
+- [learnings](./learnings)
+  - [LEARNING-process-discovery-model.md](./learnings/LEARNING-process-discovery-model.md)
+  - [LEARNING-process-domain.md](./learnings/LEARNING-process-domain.md)
+- [starter](./starter)
+  - [.roo](./starter/.roo)
+    - [rules](./starter/.roo/rules)
+      - [00-cde-global.md](./starter/.roo/rules/00-cde-global.md)
+  - [learnings](./starter/learnings)
+    - [.gitkeep](./starter/learnings/.gitkeep)
+  - [specs](./starter/specs)
+    - [.gitkeep](./starter/specs/.gitkeep)
+  - [.rooignore](./starter/.rooignore)
+  - [.roomodes](./starter/.roomodes)
+  - [AGENTS.md](./starter/AGENTS.md)
+  - [CDE_INDEX.md](./starter/CDE_INDEX.md)
+  - [CONTRIBUTING.md](./starter/CONTRIBUTING.md)
+  - [README.md](./starter/README.md)
+  - [TESTING_STRATEGY.md](./starter/TESTING_STRATEGY.md)
+- [.gitignore](./.gitignore)
+- [.markdownlint.json](./.markdownlint.json)
+- [.roomodes](./.roomodes)
+- [AGENT_ROLES.md](./AGENT_ROLES.md)
+- [CONSOLIDATION.md](./CONSOLIDATION.md)
+- [CONTRIBUTING.md](./CONTRIBUTING.md)
+- [DISCOVERY_GUIDE.md](./DISCOVERY_GUIDE.md)
+- [LEARNINGS.md](./LEARNINGS.md)
+- [LICENSE](./LICENSE)
+- [README.md](./README.md)
+- [WORKFLOW.md](./WORKFLOW.md)
