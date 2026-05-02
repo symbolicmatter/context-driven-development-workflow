@@ -149,6 +149,76 @@ Learning does **not** become authoritative automatically.
 
 The consolidation process is defined in `CONSOLIDATION.md`.
 
+## Context Coherence and Integrity Auditing
+
+Long-lived AI-assisted projects risk gradual drift between declared context (DOMAIN, ARCHITECTURE, SPEC, LEARNINGS) and the evolving codebase.
+
+CDDW addresses this risk through a principle of **Context Coherence**.
+
+Context Coherence refers to the degree to which:
+
+- Implementation reflects declared domain concepts  
+- Architecture matches structural reality  
+- Decisions remain traceable  
+- Learning is captured and consolidated into authoritative documents
+- Context remains trustworthy over time
+
+Coherence is not assumed. It must be periodically assessed.
+
+### The Integrity Auditor
+
+CDDW introduces an optional but strongly recommended review mechanism: the **Integrity Auditor**.
+
+The Auditor evaluates the alignment between context and implementation and produces a structured Coherence Report for human review.
+
+This mechanism:
+
+- Does not modify code or documents  
+- Does not block builds  
+- Does not enforce thresholds  
+- Encourages discipline through visibility
+
+The goal is not bureaucratic compliance, but sustained clarity.
+
+### Coherence Dimensions
+
+The Auditor evaluates coherence across four dimensions:
+
+1. **Traceability**  
+
+   - Are code artifacts linked to domain and specification concepts?  
+   - Are implemented features traceable to declared intent?
+
+2. **Context Freshness**  
+
+   - Do recent structural changes appear in ARCHITECTURE?
+   - Do specifications still describe current behavior?
+   - Is context lagging behind implementation?
+
+3. **Architecture Alignment**
+
+   - Do new abstractions exist in code but not in DOMAIN?  
+   - Does the actual structure diverge from declared architecture?  
+   - Are repeated patterns undocumented?
+
+4. **Learning Consolidation**
+
+   - Has implementation learning been captured where required?
+   - Are learning artifacts awaiting human consolidation?
+   - Does unconsolidated learning affect a commitment point?
+
+Each assessed dimension is rated on a lightweight **1–5 Coherence Level scale**.
+
+An optional overall Coherence Level may be derived for overview purposes. When used, it should not average away serious weakness in any dimension.
+
+The Integrity Auditor role is defined in `AGENT_ROLES.md`.
+
+### Design Principle
+
+CDDW treats coherence as a living property of a system.
+
+The responsibility for maintaining coherence remains human. The Auditor provides structured visibility.
+
 ## The CDDW Lifecycle
 
 CDDW structures development as a repeating cycle with four phases:
@@ -342,7 +412,7 @@ That trade-off must be intentional.
 CDDW is tool-agnostic by design.
 
 This repository includes a reference implementation under `/starter/`
-that integrates CDDW with a specific execution environment (currently Roo Code).
+that integrates CDDW with a specific execution environment.
 
 Other execution environments may be developed in the future.
 

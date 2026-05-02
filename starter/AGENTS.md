@@ -193,6 +193,28 @@ Learning is not optional. It is a required output when discovery occurs.
 
 The structure and handling of learning artifacts is defined in `LEARNINGS.md` and governed by the Context-Driven Development Workflow (`CDDW.md`).
 
+## 7.1 Integrity Audit Tasks
+
+When assigned an integrity audit task, use the CDE Integrity Auditor agent.
+
+If the current agent configuration is not intended for integrity auditing, stop and ask the human to switch to the CDE Integrity Auditor agent or explicitly confirm that this agent should perform the audit.
+
+The auditor's responsibility is to assess context-code coherence and produce a Coherence Report. The auditor must not modify code, authoritative context, specifications, learning artifacts, or backlog state unless explicitly instructed by a human in a separate task.
+
+Before auditing, load the full project context hierarchy defined in `CDE_INDEX.md`, then read `INTEGRITY_AUDIT.md` for audit dimensions, scoring, and report format.
+
+During the audit:
+
+- Treat authoritative context as the source of intent
+- Treat code as implementation evidence, not as the source of truth
+- Distinguish evidence from interpretation
+- Identify uncertainty explicitly
+- Avoid assigning blame
+- Prefer concrete file references and examples over broad judgments
+- Keep recommendations advisory
+
+If required context is missing, contradictory, or inaccessible, stop and report that the audit cannot be completed responsibly.
+
 ## 8. Change Discipline
 
 You must work incrementally.
