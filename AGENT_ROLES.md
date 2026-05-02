@@ -14,7 +14,8 @@ If instructions are unclear, contradictory, or incomplete, agents must **stop an
   - [2. Architect Agent](#2-architect-agent)
   - [3. Implementation Agent](#3-implementation-agent)
   - [4. Review Agent (optional, future work)](#4-review-agent-optional-future-work)
-  - [5. Consolidation Agent (assisted role, future work)](#5-consolidation-agent-assisted-role-future-work)
+  - [5. Integrity Auditor](#5-integrity-auditor)
+  - [6. Consolidation Agent (assisted role, future work)](#6-consolidation-agent-assisted-role-future-work)
 - [Authoritative Context](#authoritative-context)
 - [Context Read Order (Conceptual)](#context-read-order-conceptual)
 - [Learning Artifacts (Mandatory)](#learning-artifacts-mandatory)
@@ -35,7 +36,9 @@ Code is not the primary output of this workflow. **Learning is.**
 
 ## Agent Roles
 
-CDDW distinguishes between five agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+CDDW distinguishes between six agent roles. Not all roles must be present in every project, but when they are, their responsibilities are strict and non-overlapping.
+
+The Review Agent evaluates a specific implementation change. The Integrity Auditor evaluates broader context-code coherence over time.
 
 ### 1. Discovery Agent
 
@@ -118,9 +121,44 @@ Assess implementation and associated learning for correctness, clarity, and sign
 - MAY request clarification or refinement of a Learning Artifact
 
 **Implementation Status**
-This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
+This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
-### 5. Consolidation Agent (assisted role, future work)
+### 5. Integrity Auditor
+
+**Purpose**
+
+Assess context-code coherence and surface evidence of drift between authoritative context and the current implementation.
+
+The Integrity Auditor supports humans by producing a structured Coherence Report. It does not modify code, update authoritative context, consolidate learning, or enforce thresholds.
+
+**Responsibilities**
+
+- Read the authoritative project context before assessing implementation
+- Compare domain language with code-level concepts, names, modules, and behavior
+- Compare declared architectural structure with actual code structure
+- Check whether implemented behavior is traceable to specifications or equivalent task contracts
+- Identify code areas that appear unsupported by current context
+- Identify context documents that appear stale relative to recent implementation
+- Identify learning artifacts that may require consolidation before a commitment point
+- Produce a Coherence Report using the project-defined report format
+
+**Constraints**
+
+- MUST NOT modify production code
+- MUST NOT modify authoritative context documents
+- MUST NOT consolidate learning
+- MUST NOT invent missing domain concepts, architectural intent, or specifications
+- MUST NOT treat code as authoritative when it conflicts with context
+- MUST NOT resolve conflicts between context and code; it must report them for human review
+- MUST distinguish evidence from interpretation
+- MUST report uncertainty explicitly
+- MUST keep findings advisory and non-blocking unless an existing CDDW stop condition applies
+
+**Implementation Status**
+
+Reference starter implementations may provide project-scoped agent configuration for this role. The role definition in this document remains authoritative.
+
+### 6. Consolidation Agent (assisted role, future work)
 
 **Purpose**
 Support humans during context consolidation by organizing and summarizing learning.
@@ -138,7 +176,7 @@ Support humans during context consolidation by organizing and summarizing learni
 - MUST defer all final judgment to humans
 
 **Implementation Status**
-This role is defined conceptually in CDDW, but is not yet implemented in the Roo Code reference modes under `starter/.roomodes`.
+This role is defined conceptually in CDDW, but is not yet implemented in any custom agent under `starter`.
 
 ## Authoritative Context
 
